@@ -1,5 +1,5 @@
 #!/bin/bash
-# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-License-Identifier: MIT
 # Copyright (C) 2026 Ahmad Parr
 # twinpay-kotlin end-to-end demo: register -> gift -> send -> idempotent
 # resend -> balances -> reverse -> double-reverse guard -> conservation.
@@ -26,6 +26,11 @@ for i in $(seq 1 50); do
   curl -sf "http://127.0.0.1:$PORT/v1/health" >/dev/null 2>&1 && break
   sleep 0.2
 done
+if ! curl -sf "http://127.0.0.1:$PORT/v1/health" >/dev/null 2>&1; then
+  echo "server failed to start; log:"
+  cat /tmp/twinpay-demo.log
+  exit 1
+fi
 
 say() { echo; echo "== $1"; }
 post() { curl -s -X POST "http://127.0.0.1:$PORT$1" -d "$2"; echo; }

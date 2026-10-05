@@ -1,0 +1,4 @@
+ebin/
+_build/
+erl_crash.dump
+priv/worm*.dat

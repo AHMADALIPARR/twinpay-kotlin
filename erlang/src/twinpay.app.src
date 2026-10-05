@@ -1,0 +1,24 @@
+{application, twinpay,
+ [{description, "twinpay - Venmo-like token payments orchestrated by agents"},
+  {vsn, "0.1.0"},
+  {registered, [twinpay_sup]},
+  {mod, {twinpay_app, []}},
+  {applications, [kernel, stdlib]},
+  {env, [
+    {token_symbol, <<"TWIN">>},
+    %% minor units of TWIN per whole token
+    {token_scale, 100},
+    %% Plaid is read-only verification: enforce | permissive | mock
+    {plaid_mode, enforce},
+    {plaid_cmd, "plaid"},
+    {plaid_timeout_ms, 10000},
+    %% cents per whole TWIN for ACH off-ramp redemption (business policy)
+    {redemption_cents_per_token, 100},
+    %% actors allowed to gift (mint) tokens
+    {treasury_issuers, [<<"treasury">>]},
+    {treasury_key, <<"change-me">>},
+    {http_port, 8080},
+    {http_bind, {127,0,0,1}}
+  ]},
+  {modules, []}
+ ]}.
