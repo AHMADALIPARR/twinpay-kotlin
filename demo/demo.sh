@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (C) 2026 Ahmad Parr
 # twinpay-kotlin end-to-end demo: register -> gift -> send -> idempotent
 # resend -> balances -> reverse -> double-reverse guard -> conservation.
 # Starts its own server on a demo port with a throwaway WORM file.

@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (C) 2026 Ahmad Parr
 # twinpay-kotlin build. Zero dependencies beyond the JDK + kotlinc in ../.tools.
 set -e
 HERE="$(cd "$(dirname "$0")" && pwd)"

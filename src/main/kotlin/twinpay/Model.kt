@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// Copyright (C) 2026 Ahmad Parr
+
 package twinpay
 
 /** Core domain model. Amounts are integer minor units of TWIN — never floats. */

@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// Copyright (C) 2026 Ahmad Parr
+
 package twinpay
 
 /** Minimal JSON parser/encoder, zero dependencies. Objects -> Map<String, JVal>. */

@@ -104,7 +104,7 @@ demo/demo.sh       curl end-to-end demo
 
 ## Notes
 
-- License: **TBD** — no license chosen yet; the author picks deliberately. No headers added until then.
+- License: **AGPL-3.0-only** — see [LICENSE](LICENSE). Every source file carries an SPDX header.
 - Money is `Long` minor units everywhere. No floats touch the ledger.
 - The WORM chain file is the durable record; balances live in memory (restart recovery is future work, same as the Erlang twin).
 - Port of `../twinpay` (Erlang/OTP). The NACHA layout follows the Nacha 94-character record format; routing numbers are ABA-checksum validated.
