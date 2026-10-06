@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+agent_config.yaml
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.runtime/
+.band-workspaces/
+.DS_Store
